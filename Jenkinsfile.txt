@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('JAVAC') {
+            steps {
+                javac main.java
+            }
+        }
+	stage('RUN') {
+            steps {
+                java main.java
+            }
+        }
+    }
+}
