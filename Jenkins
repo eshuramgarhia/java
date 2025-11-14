@@ -2,12 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('JAVAC') {
-            steps {
-                javac main.java
-            }
-        }
-	stage('RUN') {
+	       stage('RUN') {
             steps {
                 java main.java
             }
