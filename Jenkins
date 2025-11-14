@@ -2,9 +2,14 @@ pipeline {
     agent any
 
     stages {
-	       stage('RUN') {
+		stage('JAVAC') {
             steps {
-                java main.java
+                bat 'javac HelloJenkins.java'
+            }
+        }
+	    stage('RUN') {
+            steps {
+                bat 'java HelloJenkins'
             }
         }
     }
